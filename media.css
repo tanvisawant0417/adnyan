@@ -1,47 +1,16 @@
-/* =========================================================
-   ROOT
-========================================================= */
-
-:root {
-
-    --green: #245B2A;
-    --green-dark: #123b20;
-    --green-light: #4d7c55;
-
-    --orange: #ED9B32;
-    --orange-dark: #cf7b18;
-
-    --cream: #FAF9F6;
-
-    --dark: #14251f;
-
-    --text: #222222;
-
-    --muted: #6b716d;
-
-    --white: #ffffff;
-
-}
-
-
-/* =========================================================
+/* =====================================================
    RESET
-========================================================= */
+===================================================== */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 
@@ -52,9 +21,9 @@ body {
         Helvetica,
         sans-serif;
 
-    background: var(--cream);
+    background: #FAF9F6;
 
-    color: var(--text);
+    color: #222;
 
     overflow-x: hidden;
 
@@ -62,23 +31,13 @@ body {
 
 
 a {
-
     text-decoration: none;
-
 }
 
 
-img {
-
-    max-width: 100%;
-
-}
-
-
-
-/* =========================================================
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 .header {
 
@@ -86,36 +45,29 @@ img {
 
     height: 115px;
 
+    background: #ffffff;
+
     display: flex;
 
     align-items: center;
 
     justify-content: space-between;
 
-    padding: 0 48px 0 30px;
+    padding: 0 45px 0 30px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
 
     position: relative;
 
     z-index: 100;
 
-    background:
-        rgba(255,255,255,0.97);
-
-    box-shadow:
-
-        0 5px 20px rgba(0,0,0,0.05),
-
-        0 1px 0 rgba(36,91,42,0.08);
-
-    perspective: 1200px;
-
 }
 
 
-
-/* =========================================================
+/* =====================================================
    BRAND
-========================================================= */
+===================================================== */
 
 .brand {
 
@@ -123,50 +75,16 @@ img {
 
     align-items: center;
 
-    transform-style: preserve-3d;
-
-    transition:
-        transform 0.4s ease;
-
 }
 
 
-.brand:hover {
-
-    transform:
-        translateZ(12px);
-
-}
-
-
-.brand img {
+.brand-logo img {
 
     width: 72px;
 
     height: 72px;
 
     object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 8px 8px rgba(0,0,0,0.12)
-        );
-
-    transition:
-        transform 0.4s ease;
-
-}
-
-
-.brand:hover img {
-
-    transform:
-
-        translateZ(15px)
-
-        rotateY(8deg)
-
-        scale(1.04);
 
 }
 
@@ -184,11 +102,9 @@ img {
 
     font-weight: 700;
 
+    color: #222;
+
     line-height: 1;
-
-    color: var(--text);
-
-    letter-spacing: 0.5px;
 
 }
 
@@ -203,15 +119,12 @@ img {
 
     color: #555;
 
-    line-height: 1;
-
 }
 
 
-
-/* =========================================================
+/* =====================================================
    NAVIGATION
-========================================================= */
+===================================================== */
 
 .navbar {
 
@@ -219,29 +132,27 @@ img {
 
     align-items: center;
 
-    gap: 34px;
-
-    perspective: 900px;
+    gap: 32px;
 
 }
 
 
 .navbar a {
 
-    position: relative;
-
-    color: var(--text);
+    color: #222;
 
     font-size: 15px;
 
-    transition:
+    font-weight: 500;
 
-        color 0.3s ease,
+    position: relative;
 
-        transform 0.3s ease;
+    transition: 0.3s ease;
 
 }
 
+
+/* NAV HOVER */
 
 .navbar a:not(.donate)::after {
 
@@ -257,23 +168,16 @@ img {
 
     height: 2px;
 
-    background: var(--green);
+    background: #245B2A;
 
-    transition:
-        width 0.3s ease;
+    transition: 0.3s ease;
 
 }
 
 
 .navbar a:not(.donate):hover {
 
-    color: var(--green);
-
-    transform:
-
-        translateY(-3px)
-
-        rotateX(8deg);
+    color: #245B2A;
 
 }
 
@@ -285,11 +189,13 @@ img {
 }
 
 
+/* ACTIVE MEDIA */
+
 .navbar a.active {
 
-    color: var(--green);
+    color: #245B2A;
 
-    font-weight: 600;
+    font-weight: 700;
 
 }
 
@@ -301,256 +207,190 @@ img {
 }
 
 
-
-/* =========================================================
+/* =====================================================
    DONATE BUTTON
-========================================================= */
+===================================================== */
 
 .navbar .donate {
 
-    padding: 15px 27px;
+    background: #ED9B32;
+
+    color: #ffffff;
+
+    padding: 14px 25px;
 
     border-radius: 8px;
-
-    background:
-
-        linear-gradient(
-
-            145deg,
-
-            #F2AA43,
-
-            #ED9B32
-
-        );
-
-    color: white;
 
     font-weight: 700;
 
     box-shadow:
+        0 5px 0 #C87820;
 
-        0 6px 0 #C87820,
-
-        0 12px 25px rgba(0,0,0,0.14);
-
-    transition:
-
-        transform 0.3s ease,
-
-        box-shadow 0.3s ease;
+    transition: 0.3s ease;
 
 }
 
 
 .navbar .donate:hover {
 
-    transform:
-
-        translateY(-5px)
-
-        rotateX(7deg);
+    transform: translateY(-3px);
 
     box-shadow:
-
-        0 3px 0 #C87820,
-
-        0 18px 30px rgba(0,0,0,0.2);
+        0 2px 0 #C87820;
 
 }
 
 
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
 
 .menu-toggle {
 
     display: none;
 
-    align-items: center;
-
-    justify-content: center;
-
-    width: 45px;
-
-    height: 45px;
-
     border: none;
 
-    border-radius: 10px;
+    background: #245B2A;
 
-    background:
-        rgba(36,91,42,0.08);
+    color: white;
 
-    color: var(--green);
+    width: 44px;
 
-    font-size: 21px;
+    height: 44px;
+
+    border-radius: 8px;
+
+    font-size: 20px;
 
     cursor: pointer;
 
 }
 
 
+/* =====================================================
+   CONSTRUCTION SECTION
+===================================================== */
 
-/* =========================================================
-   CONSTRUCTION PAGE
-========================================================= */
+.construction {
 
-.construction-page {
+    min-height: calc(100vh - 180px);
 
-    min-height:
+    display: flex;
 
-        calc(100vh - 115px);
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 25px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #FAF9F6,
+            #F0F5EE
+        );
 
     position: relative;
 
     overflow: hidden;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 70px 7%;
-
-    background:
-
-        linear-gradient(
-
-            135deg,
-
-            #FAF9F6 0%,
-
-            #F3F7F0 50%,
-
-            #EAF1E7 100%
-
-        );
-
-    perspective: 1400px;
-
 }
 
 
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
 
-/* =========================================================
-   BACKGROUND CIRCLES
-========================================================= */
+.construction::before {
 
-.construction-circle {
+    content: "";
 
     position: absolute;
-
-    border-radius: 50%;
-
-    pointer-events: none;
-
-}
-
-
-.circle-one {
 
     width: 500px;
 
     height: 500px;
 
+    border-radius: 50%;
+
+    background: rgba(36, 91, 42, 0.07);
+
     left: -250px;
 
     top: -250px;
 
-    background:
-
-        rgba(36,91,42,0.08);
-
-    filter: blur(5px);
-
 }
 
 
-.circle-two {
+.construction::after {
+
+    content: "";
+
+    position: absolute;
 
     width: 450px;
 
     height: 450px;
 
-    right: -220px;
+    border-radius: 50%;
 
-    bottom: -230px;
+    background: rgba(237, 155, 50, 0.10);
 
-    background:
+    right: -200px;
 
-        rgba(237,155,50,0.12);
-
-    filter: blur(5px);
+    bottom: -220px;
 
 }
 
 
+/* =====================================================
+   MAIN BOX
+===================================================== */
 
-/* =========================================================
-   CONSTRUCTION CARD
-========================================================= */
-
-.construction-card {
+.construction-box {
 
     width: 100%;
 
-    max-width: 1050px;
+    max-width: 900px;
 
-    min-height: 540px;
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    padding: 65px 40px;
+
+    text-align: center;
 
     position: relative;
 
     z-index: 2;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 65px 50px;
-
-    border-radius: 30px;
-
     border:
-
-        1px solid rgba(36,91,42,0.15);
-
-    background:
-
-        rgba(255,255,255,0.85);
+        1px solid rgba(36, 91, 42, 0.12);
 
     box-shadow:
 
-        0 12px 0 rgba(36,91,42,0.10),
-
-        0 35px 75px rgba(20,50,30,0.16);
-
-    backdrop-filter: blur(12px);
-
-    transform-style: preserve-3d;
+        0 20px 60px
+        rgba(0, 0, 0, 0.12);
 
 }
 
 
-
-/* =========================================================
-   MEDIA ICON
-========================================================= */
+/* =====================================================
+   ICON
+===================================================== */
 
 .construction-icon {
 
-    width: 105px;
+    width: 100px;
 
-    height: 105px;
+    height: 100px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 22px;
 
     display: flex;
 
@@ -558,21 +398,7 @@ img {
 
     justify-content: center;
 
-    margin-bottom: 28px;
-
-    border-radius: 25px;
-
-    background:
-
-        linear-gradient(
-
-            145deg,
-
-            #F2AA43,
-
-            #ED9B32
-
-        );
+    background: #ED9B32;
 
     color: white;
 
@@ -580,167 +406,126 @@ img {
 
     box-shadow:
 
-        0 10px 0 #C87820,
-
-        0 20px 35px rgba(0,0,0,0.16);
-
-    transform:
-
-        translateZ(45px);
+        0 8px 0 #C87820;
 
     animation:
 
-        floating 3s ease-in-out infinite;
+        floatIcon 3s ease-in-out infinite;
 
 }
 
 
-@keyframes floating {
+@keyframes floatIcon {
 
-    0%,
-    100% {
+    0% {
 
-        transform:
-
-            translateZ(45px)
-
-            translateY(0);
+        transform: translateY(0);
 
     }
 
     50% {
 
-        transform:
+        transform: translateY(-8px);
 
-            translateZ(55px)
+    }
 
-            translateY(-10px);
+    100% {
+
+        transform: translateY(0);
 
     }
 
 }
 
 
+/* =====================================================
+   SMALL TITLE
+===================================================== */
 
-/* =========================================================
-   ORGANIZATION LABEL
-========================================================= */
+.small-title {
 
-.construction-label {
-
-    display: block;
-
-    margin-bottom: 15px;
-
-    color: var(--orange);
+    color: #ED9B32;
 
     font-size: 11px;
 
     font-weight: 700;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
 
 }
 
 
+/* =====================================================
+   HEADING
+===================================================== */
 
-/* =========================================================
-   MAIN HEADING
-========================================================= */
+.construction-box h1 {
 
-.construction-card h1 {
+    color: #245B2A;
 
-    color: var(--green-dark);
-
-    font-size: 54px;
-
-    line-height: 1.08;
+    font-size: 56px;
 
     font-weight: 800;
 
-    letter-spacing: -1px;
-
-    text-shadow:
-
-        0 5px 0 rgba(36,91,42,0.08);
-
-    transform:
-
-        translateZ(35px);
+    margin-bottom: 5px;
 
 }
 
 
-.construction-card h1 span {
+.construction-box h2 {
 
-    display: block;
+    color: #ED9B32;
 
-    margin-top: 6px;
+    font-size: 27px;
 
-    color: var(--orange);
+    font-weight: 800;
 
 }
 
 
-
-/* =========================================================
+/* =====================================================
    ORANGE LINE
-========================================================= */
+===================================================== */
 
-.construction-line {
+.orange-line {
 
     width: 70px;
 
     height: 4px;
 
+    background: #ED9B32;
+
     margin: 22px auto;
 
     border-radius: 10px;
 
-    background: var(--orange);
-
-    box-shadow:
-
-        0 5px 12px rgba(237,155,50,0.25);
-
 }
 
 
-
-/* =========================================================
+/* =====================================================
    MESSAGE
-========================================================= */
+===================================================== */
 
-.construction-card > p {
+.message {
 
     max-width: 650px;
 
-    margin: 0 auto;
+    margin: auto;
 
-    color: #555;
+    color: #666;
 
     font-size: 16px;
 
-    line-height: 1.75;
+    line-height: 1.8;
 
 }
 
 
-.construction-card .thank-you {
-
-    margin-top: 8px;
-
-    color: var(--green);
-
-    font-weight: 600;
-
-}
-
-
-
-/* =========================================================
+/* =====================================================
    HOME BUTTON
-========================================================= */
+===================================================== */
 
 .home-button {
 
@@ -756,21 +541,11 @@ img {
 
     padding: 15px 27px;
 
-    border-radius: 9px;
-
-    background:
-
-        linear-gradient(
-
-            145deg,
-
-            #2E7137,
-
-            #245B2A
-
-        );
+    background: #245B2A;
 
     color: white;
+
+    border-radius: 8px;
 
     font-size: 14px;
 
@@ -778,82 +553,78 @@ img {
 
     box-shadow:
 
-        0 6px 0 #17451F,
+        0 5px 0 #153D1B;
 
-        0 15px 30px rgba(20,60,30,0.18);
-
-    transition:
-
-        transform 0.3s ease,
-
-        box-shadow 0.3s ease;
+    transition: 0.3s ease;
 
 }
 
 
 .home-button:hover {
 
-    transform:
-
-        translateY(-5px)
-
-        translateZ(15px);
+    transform: translateY(-3px);
 
     box-shadow:
 
-        0 3px 0 #17451F,
-
-        0 20px 35px rgba(20,60,30,0.22);
+        0 2px 0 #153D1B;
 
 }
 
 
 .home-button i {
 
-    color: var(--orange);
+    color: #ED9B32;
 
 }
 
 
+/* =====================================================
+   STATUS
+===================================================== */
 
-/* =========================================================
-   STATUS CARD
-========================================================= */
+.status {
 
-.construction-status {
-
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
-    gap: 13px;
+    gap: 10px;
 
-    margin-top: 35px;
+    margin-top: 30px;
 
-    padding: 13px 20px;
+    padding: 12px 18px;
 
-    border-radius: 12px;
+    border-radius: 8px;
 
-    background:
+    background: #F2F6F1;
 
-        rgba(36,91,42,0.06);
+    color: #245B2A;
 
-    border:
+    font-size: 11px;
 
-        1px solid rgba(36,91,42,0.10);
+    font-weight: 700;
 
-    box-shadow:
-
-        0 6px 15px rgba(20,50,30,0.06);
+    letter-spacing: 1px;
 
 }
 
 
-.status-icon {
+.status i {
 
-    width: 38px;
+    color: #ED9B32;
 
-    height: 38px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    min-height: 65px;
+
+    background: #14251F;
 
     display: flex;
 
@@ -861,161 +632,25 @@ img {
 
     justify-content: center;
 
-    border-radius: 10px;
+    text-align: center;
 
-    background: var(--green);
-
-    color: white;
-
-    font-size: 16px;
-
-    animation:
-
-        rotateGear 4s linear infinite;
+    padding: 15px;
 
 }
 
 
-@keyframes rotateGear {
+.footer p {
 
-    from {
-
-        transform: rotate(0deg);
-
-    }
-
-    to {
-
-        transform: rotate(360deg);
-
-    }
-
-}
-
-
-.status-text span {
-
-    display: block;
-
-    color: var(--muted);
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    text-align: left;
-
-}
-
-
-.status-text strong {
-
-    display: block;
-
-    margin-top: 3px;
-
-    color: var(--green);
-
-    font-size: 12px;
-
-    letter-spacing: 0.5px;
-
-    text-align: left;
-
-}
-
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.footer {
-
-    width: 100%;
-
-    background:
-
-        linear-gradient(
-
-            135deg,
-
-            #14251F,
-
-            #102019
-
-        );
-
-    color: white;
-
-}
-
-
-.footer-bottom {
-
-    width: 90%;
-
-    max-width: 1250px;
-
-    min-height: 65px;
-
-    margin: 0 auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-}
-
-
-.footer-bottom p {
-
-    color: #7F8B84;
+    color: #8B968F;
 
     font-size: 11px;
 
 }
 
 
-.footer-bottom div {
-
-    display: flex;
-
-    gap: 22px;
-
-}
-
-
-.footer-bottom a {
-
-    color: #7F8B84;
-
-    font-size: 11px;
-
-    transition:
-
-        color 0.3s ease;
-
-}
-
-
-.footer-bottom a:hover {
-
-    color: var(--orange);
-
-}
-
-
-
-/* =========================================================
+/* =====================================================
    TABLET
-========================================================= */
+===================================================== */
 
 @media (max-width: 1000px) {
 
@@ -1040,45 +675,35 @@ img {
     }
 
 
-    .brand-name .title {
+    .construction-box h1 {
 
-        font-size: 24px;
-
-    }
-
-
-    .construction-card h1 {
-
-        font-size: 45px;
+        font-size: 48px;
 
     }
 
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
 
-/* =========================================================
-   MOBILE HEADER
-========================================================= */
-
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
     .header {
 
-        min-height: 82px;
-
-        height: auto;
+        height: 82px;
 
         padding: 10px 20px;
 
     }
 
 
-    .brand img {
+    .brand-logo img {
 
-        width: 60px;
+        width: 58px;
 
-        height: 60px;
+        height: 58px;
 
     }
 
@@ -1101,6 +726,10 @@ img {
 
         display: flex;
 
+        align-items: center;
+
+        justify-content: center;
+
     }
 
 
@@ -1110,30 +739,28 @@ img {
 
         position: absolute;
 
-        top: 100%;
-
         left: 0;
+
+        top: 82px;
 
         width: 100%;
 
-        padding: 18px 20px 22px;
+        background: white;
+
+        padding: 15px 20px 20px;
 
         flex-direction: column;
 
-        gap: 4px;
-
-        background:
-
-            rgba(255,255,255,0.98);
+        gap: 5px;
 
         box-shadow:
 
-            0 15px 30px rgba(0,0,0,0.08);
+            0 15px 30px rgba(0,0,0,0.10);
 
     }
 
 
-    .navbar.open {
+    .navbar.show {
 
         display: flex;
 
@@ -1144,11 +771,9 @@ img {
 
         width: 100%;
 
-        padding: 12px 10px;
-
         text-align: center;
 
-        border-radius: 8px;
+        padding: 12px;
 
     }
 
@@ -1160,208 +785,86 @@ img {
     }
 
 
-    .navbar a:hover,
     .navbar a.active {
 
-        background:
+        background: #F0F5EE;
 
-            rgba(36,91,42,0.07);
+        border-radius: 7px;
 
     }
 
 
     .navbar .donate {
 
-        margin-top: 6px;
+        margin-top: 5px;
 
     }
 
 
-    .construction-page {
+    .construction {
 
-        min-height:
+        min-height: calc(100vh - 147px);
 
-            calc(100vh - 82px);
-
-        padding: 50px 5%;
+        padding: 45px 20px;
 
     }
 
 
-    .construction-card {
+    .construction-box {
 
-        padding: 55px 30px;
+        padding: 50px 25px;
 
     }
 
 
-    .construction-card h1 {
+    .construction-box h1 {
 
-        font-size: 39px;
+        font-size: 42px;
+
+    }
+
+
+    .construction-box h2 {
+
+        font-size: 22px;
 
     }
 
 }
 
 
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
     .header {
 
-        padding: 13px 15px;
+        padding: 10px 15px;
 
     }
 
 
-    .brand img {
+    .brand-logo img {
 
-        width: 55px;
+        width: 52px;
 
-        height: 55px;
+        height: 52px;
 
     }
 
 
     .brand-name {
 
-        margin-left: 8px;
+        margin-left: 7px;
 
     }
 
 
     .brand-name .title {
-
-        font-size: 20px;
-
-    }
-
-
-    .brand-name .subtitle {
-
-        font-size: 8px;
-
-    }
-
-
-    .menu-toggle {
-
-        width: 42px;
-
-        height: 42px;
 
         font-size: 19px;
-
-    }
-
-
-    .construction-page {
-
-        padding: 35px 5%;
-
-    }
-
-
-    .construction-card {
-
-        min-height: 500px;
-
-        padding: 45px 20px;
-
-        border-radius: 22px;
-
-    }
-
-
-    .construction-icon {
-
-        width: 85px;
-
-        height: 85px;
-
-        border-radius: 20px;
-
-        font-size: 32px;
-
-    }
-
-
-    .construction-label {
-
-        font-size: 9px;
-
-        letter-spacing: 1.5px;
-
-    }
-
-
-    .construction-card h1 {
-
-        font-size: 31px;
-
-        letter-spacing: -0.5px;
-
-    }
-
-
-    .construction-card > p {
-
-        font-size: 14px;
-
-        line-height: 1.65;
-
-    }
-
-
-    .home-button {
-
-        padding: 14px 22px;
-
-        font-size: 13px;
-
-    }
-
-
-    .construction-status {
-
-        margin-top: 28px;
-
-        padding: 11px 15px;
-
-    }
-
-
-    .footer-bottom {
-
-        width: 88%;
-
-        padding: 18px 0;
-
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 12px;
-
-    }
-
-}
-
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 400px) {
-
-    .brand-name .title {
-
-        font-size: 18px;
 
     }
 
@@ -1373,23 +876,57 @@ img {
     }
 
 
-    .construction-card {
+    .construction {
 
-        padding: 40px 16px;
-
-    }
-
-
-    .construction-card h1 {
-
-        font-size: 27px;
+        padding: 30px 15px;
 
     }
 
 
-    .construction-card > p {
+    .construction-box {
 
-        font-size: 13px;
+        padding: 40px 18px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .construction-icon {
+
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 32px;
+
+    }
+
+
+    .construction-box h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .construction-box h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .message {
+
+        font-size: 14px;
+
+    }
+
+
+    .status {
+
+        font-size: 9px;
 
     }
 
