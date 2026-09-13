@@ -4,13 +4,16 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Media | ADNYAN Research & Educational Trust</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
     <!-- Media CSS -->
     <link rel="stylesheet" href="media.css">
@@ -21,11 +24,13 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================
          HEADER
-    ====================================================== -->
+    ========================== -->
 
     <header class="header">
+
+        <!-- BRAND -->
 
         <div class="brand">
 
@@ -54,13 +59,12 @@
         </div>
 
 
-
         <!-- MOBILE MENU BUTTON -->
 
         <button
             class="menu-toggle"
             id="menuToggle"
-            aria-label="Open navigation"
+            aria-label="Open menu"
         >
 
             <i class="fa-solid fa-bars"></i>
@@ -68,13 +72,9 @@
         </button>
 
 
-
         <!-- NAVIGATION -->
 
-        <nav
-            class="navbar"
-            id="navbar"
-        >
+        <nav class="navbar" id="navbar">
 
             <a href="index.html">
                 Home
@@ -110,27 +110,16 @@
 
 
 
-    <!-- =====================================================
-         MEDIA UNDER CONSTRUCTION
-    ====================================================== -->
+    <!-- =========================
+         UNDER CONSTRUCTION
+    ========================== -->
 
-    <main class="construction-page">
+    <main class="construction">
 
-
-        <!-- BACKGROUND DECORATION -->
-
-        <div class="construction-circle circle-one"></div>
-
-        <div class="construction-circle circle-two"></div>
+        <div class="construction-box">
 
 
-
-        <!-- MAIN CONSTRUCTION CARD -->
-
-        <section class="construction-card">
-
-
-            <!-- MEDIA ICON -->
+            <!-- ICON -->
 
             <div class="construction-icon">
 
@@ -139,66 +128,46 @@
             </div>
 
 
+            <!-- SMALL TEXT -->
 
-            <!-- ORGANIZATION NAME -->
-
-            <span class="construction-label">
-
-                ADNYAN RESEARCH &amp; EDUCATIONAL TRUST
-
-            </span>
+            <p class="small-title">
+                ADNYAN RESEARCH & EDUCATIONAL TRUST
+            </p>
 
 
-
-            <!-- MAIN TITLE -->
+            <!-- MAIN HEADING -->
 
             <h1>
-
                 MEDIA
-
-                <span>
-                    UNDER CONSTRUCTION
-                </span>
-
             </h1>
 
+            <h2>
+                WEBSITE UNDER CONSTRUCTION
+            </h2>
 
 
-            <!-- DECORATIVE LINE -->
+            <!-- LINE -->
 
-            <div class="construction-line"></div>
+            <div class="orange-line"></div>
 
 
+            <!-- DESCRIPTION -->
 
-            <!-- MESSAGE -->
+            <p class="message">
 
-            <p>
-
-                Our Media section is currently under construction.
+                Our Media section is currently being prepared.
 
                 <br>
 
-                We are working on bringing you photographs,
-                videos, news, events and stories from our work.
+                Photographs, videos, events, news and stories
+                from our work will be available here soon.
 
             </p>
 
 
+            <!-- HOME BUTTON -->
 
-            <p class="thank-you">
-
-                Stay connected with ADNYAN.
-
-            </p>
-
-
-
-            <!-- BACK TO HOME -->
-
-            <a
-                href="index.html"
-                class="home-button"
-            >
+            <a href="index.html" class="home-button">
 
                 <i class="fa-solid fa-house"></i>
 
@@ -207,74 +176,43 @@
             </a>
 
 
-
             <!-- STATUS -->
 
-            <div class="construction-status">
+            <div class="status">
 
-                <div class="status-icon">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
 
-                    <i class="fa-solid fa-gear"></i>
-
-                </div>
-
-
-                <div class="status-text">
-
-                    <span>
-                        MEDIA SECTION
-                    </span>
-
-                    <strong>
-                        WORK IN PROGRESS
-                    </strong>
-
-                </div>
+                <span>
+                    MEDIA SECTION IN PROGRESS
+                </span>
 
             </div>
 
 
-        </section>
+        </div>
 
     </main>
 
 
 
-    <!-- =====================================================
+    <!-- =========================
          FOOTER
-    ====================================================== -->
+    ========================== -->
 
     <footer class="footer">
 
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 ADNYAN Research &amp; Educational Trust.
-                All Rights Reserved.
-            </p>
-
-
-            <div>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="#">
-                    Privacy Policy
-                </a>
-
-            </div>
-
-        </div>
+        <p>
+            © 2026 ADNYAN Research & Educational Trust.
+            All Rights Reserved.
+        </p>
 
     </footer>
 
 
 
-    <!-- =====================================================
-         MOBILE MENU SCRIPT
-    ====================================================== -->
+    <!-- =========================
+         MOBILE MENU
+    ========================== -->
 
     <script>
 
@@ -287,22 +225,9 @@
 
         menuToggle.addEventListener("click", function () {
 
-            navbar.classList.toggle("open");
+            navbar.classList.toggle("show");
 
         });
-
-
-        document
-            .querySelectorAll(".navbar a")
-            .forEach(link => {
-
-                link.addEventListener("click", function () {
-
-                    navbar.classList.remove("open");
-
-                });
-
-            });
 
     </script>
 
